@@ -23,7 +23,7 @@ class ReasoningEngine:
         except Exception as e:
             # Handle any exceptions that occur during decision-making
             logger.error(f'Error making decision: {e}')
-            raise ReasoningError('Failed to make decision')
+            raise ReasoningError('Failed to make decision') from e
 
     def learn(self, decision: Decision, outcome: bool):
         # Implement the learning logic
@@ -35,4 +35,4 @@ class ReasoningEngine:
         except Exception as e:
             # Handle any exceptions that occur during learning
             logger.error(f'Error learning: {e}')
-            raise ReasoningError('Failed to learn')
+            raise ReasoningError('Failed to learn') from e
