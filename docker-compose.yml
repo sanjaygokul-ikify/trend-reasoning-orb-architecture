@@ -1,0 +1,9 @@
+version: '3'
+services:
+  engine:
+    build: .
+    ports:
+      - '9000:9000'
+    volumes:
+      - .:/src
+    command: uvicorn main:app --host 0.0.0.0
