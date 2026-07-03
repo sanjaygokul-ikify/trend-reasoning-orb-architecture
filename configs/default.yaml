@@ -1,0 +1,9 @@
+memory:
+  type: hybrid
+  storage:
+    disk: /var/orb-data
+    in_memory: 4
+reasoning:
+  max_depth: 256
+  concurrency: 8
+  decision_timeout: 30s
