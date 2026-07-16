@@ -25,7 +25,7 @@ class ReasoningEngine:
             logger.error(f'Error making decision: {e}')
             raise ReasoningError('Failed to make decision') from e
 
-    def learn(self, decision: Decision, outcome: bool):
+    def learn(self, decision: Decision, outcome: bool) -> None:
         # Implement the learning logic
         try:
             # Update the state based on the outcome
